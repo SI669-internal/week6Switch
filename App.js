@@ -129,13 +129,12 @@ class DarkModeCondApp extends React.Component {
   }
 
   render() {
+    let modeText = "Off";
     if (this.state.switchValue) {
       modeText = "On";
-    } else {
-      modeText = "Off";
-    }
+    } 
     return (
-      <View style={oneStyle.container}>
+      <View style={lightStyle.container}>
         <Text>
           Dark Mode: {modeText}        
         </Text>
@@ -205,5 +204,5 @@ const oneStyle = StyleSheet.create({
 
 //export default SwitchApp;
 //export default DarkModeApp;
-//export default DarkModeCondApp;
-export default DarkModeCondApp2;
+export default DarkModeCondApp;
+//export default DarkModeCondApp2;
