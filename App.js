@@ -7,6 +7,7 @@ import { StyleSheet, Text, View, Switch } from 'react-native';
  * to run the version you want to see.
  */
 
+
 class SwitchApp extends React.Component {
   constructor(props) {
     super(props);
@@ -166,7 +167,7 @@ class DarkModeCondApp2 extends React.Component {
       <View style={[oneStyle.container, 
         this.state.switchValue ? 
           oneStyle.bgDark : 
-          {} ]}>
+          {}]}>
         <Text style={this.state.switchValue ?
           oneStyle.textDark :
           oneStyle.textLight}>
@@ -187,9 +188,9 @@ class DarkModeCondApp2 extends React.Component {
 const oneStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white', 
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: 'white', 
   },
   bgDark: {
     backgroundColor: 'black'
@@ -204,5 +205,5 @@ const oneStyle = StyleSheet.create({
 
 //export default SwitchApp;
 //export default DarkModeApp;
-export default DarkModeCondApp;
-//export default DarkModeCondApp2;
+//export default DarkModeCondApp;
+export default DarkModeCondApp2;
