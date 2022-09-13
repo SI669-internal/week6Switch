@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Switch } from 'react-native';
+import { Text, View, Switch } from 'react-native';
+import { externalStyles } from './ExternalStyles';
 
 class DarkModeCondApp2 extends React.Component {
   constructor() {
@@ -18,13 +19,13 @@ class DarkModeCondApp2 extends React.Component {
 
   render() {
     return (
-      <View style={[oneStyle.container, 
+      <View style={[externalStyles.container, 
         this.state.switchValue ? 
-          oneStyle.bgDark : 
+        externalStyles.bgDark : 
           {}]}>
         <Text style={this.state.switchValue ?
-          oneStyle.textDark :
-          oneStyle.textLight}>
+          externalStyles.textDark :
+          externalStyles.textLight}>
           Dark Mode: 
           {this.state.switchValue ?
             "On" :
@@ -38,23 +39,5 @@ class DarkModeCondApp2 extends React.Component {
     );
   }
 }
-
-const oneStyle = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white', 
-  },
-  bgDark: {
-    backgroundColor: 'black'
-  },
-  textLight: {
-    color: 'black'
-  },
-  textDark: {
-    color: 'white'
-  }
-});
 
 export default DarkModeCondApp2;
