@@ -71,11 +71,11 @@ class DarkModeApp extends React.Component {
       theStyle = darkStyle;
     }
 
-    this.setState((prevState) => {return {
+    this.setState({
       switchValue: value,
       switchStatus: status,
       style: theStyle
-    }});
+    });
   }
 
   render() {
